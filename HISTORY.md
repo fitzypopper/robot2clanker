@@ -79,7 +79,7 @@ debounce and a fast-path check), so the regression persisted to the end.
   `storage` permission that is actually needed, plus a `<all_urls>` host
   permission.
 * Pointed `homepage_url` at the renamed account
-  (`fitzypopper/Hangry-studios`); the old URL 404s.
+  (`fitzypopper/robot2clanker`); the old URL 404s.
 * Declared `data_collection_permissions: { required: ["none"] }`, which AMO
   now expects on new submissions.
 * Enabled `all_frames` so embedded frames are rewritten too.

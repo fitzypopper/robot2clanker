@@ -82,7 +82,7 @@ so it updates in place for everyone who already has it.
 > **Note:** the listing's *homepage* still points at
 > `https://github.com/Hangry-Studios`, which 404s since that account was
 > renamed to `fitzypopper`. Update it to
-> `https://github.com/fitzypopper/Hangry-studios` in the listing editor.
+> `https://github.com/fitzypopper/robot2clanker` in the listing editor.
 
 ---
 

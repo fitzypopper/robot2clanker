@@ -4,7 +4,7 @@
   "version": "3.0.0",
   "description": "Replaces 'robot' with 'clanker' (or 'clank'a') in page text and form fields on all websites.",
   "author": "fitzy",
-  "homepage_url": "https://github.com/fitzypopper/Hangry-studios",
+  "homepage_url": "https://github.com/fitzypopper/robot2clanker",
   "permissions": [
     "storage"
   ],
