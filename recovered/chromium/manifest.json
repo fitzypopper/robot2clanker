@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Clanker Replacer",
+  "version": "1.0",
+  "description": "Replaces all occurrences of 'robot(s)' with 'clanker(s)' or 'clank’a(s)', depending on the selected mode.",
+  "author": "fitzy",
+  "homepage_url": "https://github.com/Hangry-Studios",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Clanker Replacer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

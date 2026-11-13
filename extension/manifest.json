@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Robot2Clanker",
+  "version": "3.0.0",
+  "description": "Replaces 'robot' with 'clanker' (or 'clank'a') in page text and form fields on all websites.",
+  "author": "fitzy",
+  "homepage_url": "https://github.com/fitzypopper/Hangry-studios",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Robot2Clanker - choose replacement mode",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png",
+      "96": "icons/icon96.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{28ec577e-0774-4134-947a-dd2cc17594e2}",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}

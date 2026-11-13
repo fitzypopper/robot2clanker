@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot2Clanker</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #1b1b1f;
+      --muted: #5b5b66;
+      --border: #d8d8e0;
+      --accent: #4a90e2;
+      --accent-fg: #ffffff;
+      --accent-soft: #e8f1fc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #23222b;
+        --fg: #f2f2f5;
+        --muted: #a9a9b8;
+        --border: #3d3c4a;
+        --accent: #6aa9ee;
+        --accent-fg: #10131a;
+        --accent-soft: #2c3442;
+      }
+    }
+    body {
+      width: 240px;
+      margin: 0;
+      padding: 14px;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+    h1 {
+      margin: 0 0 2px;
+      font-size: 15px;
+    }
+    p.sub {
+      margin: 0 0 12px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .modes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    button.mode {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--fg);
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+    button.mode:hover {
+      border-color: var(--accent);
+    }
+    button.mode:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    button.mode.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    button.mode strong {
+      font-size: 13px;
+    }
+    button.mode span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+    button.ghost {
+      width: 100%;
+      margin-top: 12px;
+      padding: 7px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--fg);
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    button.ghost:hover {
+      border-color: var(--accent);
+    }
+    button.ghost:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    p#status {
+      margin: 10px 0 0;
+      min-height: 15px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+  <h1>Robot2Clanker</h1>
+  <p class="sub">Choose how the word &ldquo;robot&rdquo; is rewritten on every page.</p>
+
+  <div class="modes">
+    <button id="mode1" class="mode" type="button">
+      <strong>Clanker</strong>
+      <span>robot &rarr; clanker &middot; robots &rarr; clankers</span>
+    </button>
+    <button id="mode2" class="mode" type="button">
+      <strong>Clank'a</strong>
+      <span>robot &rarr; clank'a &middot; robots &rarr; clank'as</span>
+    </button>
+  </div>
+
+  <button id="rescan" class="ghost" type="button">Re-apply to this page</button>
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
